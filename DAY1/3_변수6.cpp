@@ -1,6 +1,8 @@
 #include <iostream>
-#include <cstring>
-#include <string>
+#include <cstring> // <string.h> 의 C++ 버전.
+				   // 즉, strcmp() 등의 함수를 사용하기 위해
+
+#include <string> // std::string 을 사용하려면 이 헤더가 필요 합니다.
 // 26page 아래 내용
 
 int main()
@@ -18,7 +20,8 @@ int main()
 	std::string s3 = "hello";
 	std::string s4 = s3;  // ok
 
-	s4 = s3 + s3;
+	s4 = s3 + s3; // "hello" + "hello"  =>"hellohello"
+				  // "s3 * 10" 은 안됩니다.
 	
 	if (s4 == s3) {}
 	
