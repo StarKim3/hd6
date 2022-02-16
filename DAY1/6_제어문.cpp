@@ -25,11 +25,10 @@ int main()
 	case 2: break;
 	}
 
-	// 아래 처럼 while 도 될까요 ? ??? 
-	while (int cnt = 0; cnt < 10)
-	{
-
-		++cnt;
-	}
+	// 아래 처럼 while 도 될까요 ? ??? => 안됩니다. 왜 안만들었나요 ?
+//	while (int cnt = 0; cnt < 10)	// => for 문 사용하면 되므로!
+//	{
+//		++cnt;
+//	}
 
 }
