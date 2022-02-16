@@ -22,4 +22,12 @@ int main()
 
 	auto [n1, n2, n3] = arr; // 배열도 됩니다.
 	auto [n4, n5] = arr; // error. 갯수가 동일해야만 합니다.
+
+	// 참고 : 파이썬
+//	s = (1, 2)
+//	a, b = s
+
+	auto [a1, a2] = foo(); // a1, a2변수의 선언문입니다.
+						// int a1 = foo함수반환값.x
 }
+Point foo() { Point pt; return pt; }
