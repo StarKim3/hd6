@@ -11,10 +11,19 @@ int main()
 	{
 		std::cout << x[i] << std::endl;
 	}
-
-	// C++11에서 새로 도입된 for 문
-	for (int e : x)
+	// C++11에서 새로 도입된 for 문 - "range for" 라고 합니다.
+	// 파이썬 : for e in x 
+	// C#     : foreach( int e in x)
+	// C++    : for    ( int e : x)
+	for ( auto e : x)
 	{
 		std::cout << e << std::endl;
 	}
+	// 동적할당된 배열은 안됩니다 - 크기 정보가 없습니다.
+	int* p = (int*)malloc(sizeof(int) * 10);
+	
+	for (auto e : p)  // error. 
+	{
+	}
+	free(p);
 }
