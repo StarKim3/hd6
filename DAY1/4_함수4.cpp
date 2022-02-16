@@ -23,6 +23,15 @@ T square(T a)
 
 int main()
 {
-	square<int>(3);
-	square<double>(3.3);
+	// 아래 2줄이 정확한 표기법입니다.
+	square<int>(3);		// 1. square(int) 함수를 컴파일러가 생성
+						// 2. 생성된 함수를 호출하는 기계어 코드 생성
+						//    call square(int)
+	square<double>(3.3); // square(double) 함수를 컴파일러가 생성
+						 // 그리고 생성된 함수 호출 ( call square(double))
+
+	// 함수 템플릿 사용시 타입인자 생략 가능합니다
+	// 타입인자 생략시 "함수 인자를 가지고 타입을 추론"
+	square(3);  // square<int>(3) 과 완벽히 동일합니다
+	square(3.3);
 }
