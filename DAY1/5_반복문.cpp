@@ -15,7 +15,7 @@ int main()
 	// 파이썬 : for e in x 
 	// C#     : foreach( int e in x)
 	// C++    : for    ( int e : x)
-	for ( auto e : x)
+	for ( auto e : x)   // 배열뿐 아니라 STL(C++표준라이브러리) 의 vector, list 등도 가능
 	{
 		std::cout << e << std::endl;
 	}
