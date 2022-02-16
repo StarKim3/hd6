@@ -26,9 +26,11 @@ int main()
 }
 // 주의 사항 : 함수 호출시 구별할수 있는 경우만 됩니다.
 void f1(int a) {}
-char f1(int a) {}  
+char f1(int a) { return 0; } // error. 반환타입만 다른경우는 안됩니다.
+							// 인자가 달라야 합니다.
 f1(0); // 
 
 void f2(int a) {}
 void f2(int a, int b = 0) {}
-f2(0);
+f2(0);  // 인자가 2개인 함수에 "디폴트값"이 있으므로 이순간 
+		// 어느함수로 연결한지 판단할수 없습니다. error
