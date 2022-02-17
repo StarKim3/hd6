@@ -35,6 +35,7 @@ int main()
 	// 3. -> 와 .
 	Rect  r = { 1,1,10,10 };
 	Rect* p = &r;
+ 
 
 	// 객체를 가지고 멤버에 접근할때는 . 입니다.
 	int n1 = r.left;
@@ -43,5 +44,9 @@ int main()
 	// 포인터를 사용해서 멤버에 접근할때는 -> 입니다.
 	int n3 = p->left;
 	int n4 = p->getArea();
+
+	// 레퍼런스의 경우는 . 입니다.
+	Rect& rr = r;
+	rr.draw();
 
 }
