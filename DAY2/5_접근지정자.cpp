@@ -2,14 +2,26 @@
 #include <iostream>
 #include <string>
 
+// 핵심 : 타입을 만드는데, 사용하기 쉽고, 안전하게 사용하도록 만들자.
+// "제대로 사용하기 쉽게, 잘못사용하기 어렵게 만들어라"
+
 struct Person
 {
-	std::string name;
+private:				// private 영역 : 멤버 함수에서만 접근 가능
+	std::string name;	//				멤버가 아닌 함수에서 접근시 에러
 	int  age;
-};
 
+public:					// public 영역 : 모든 곳에서 접근 가능한 멤버
+	void setAge(int value)
+	{
+		if ( value > 0 && value < 150 )
+			age = value;
+	}
+};
 int main()
 {
 	Person p;
-	p.age = -10;
+//	p.age = -10; // 잘못된 사용으로 객체의 상태라 불안해 졌다.
+				 // private 에 있다면 컴파일 에러
+	p.setAge(-10);
 }
