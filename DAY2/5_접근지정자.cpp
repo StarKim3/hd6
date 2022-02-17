@@ -5,6 +5,14 @@
 // 핵심 : 타입을 만드는데, 사용하기 쉽고, 안전하게 사용하도록 만들자.
 // "제대로 사용하기 쉽게, 잘못사용하기 어렵게 만들어라"
 
+// 접근 지정자 : public vs private
+
+// 외부의 잘못된 사용으로 부터 객체가 불안한 상태가 되는 것을 막는다.
+
+// 캡슐화(encapsulation), 정보 은닉(information hiding) 이라고 합니다.
+
+
+
 struct Person
 {
 private:				// private 영역 : 멤버 함수에서만 접근 가능
