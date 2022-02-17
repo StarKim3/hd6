@@ -40,4 +40,12 @@ void f1(const int& n) {}// 2
 
 // B. 원본 인자를 변경하지 않는 경우
 // 1. primitive type 이라면   : call by value로 하세요  void fn(int n){}
-// 2. user define type 이라면 : const reference로 하세요  void fn(const Rect& r){}
+//                 => 크기가 크지 않고, 컴파일러 최적화가 좀더 잘 지원 된다.
+// 
+// 2. user define type 이라면 : const reference로 하세요 void fn(const Rect& r){}
+//				   => 크기가 크고, 복사 생성자가호출되기 때문에 오버헤드가 있다.
+
+// 크기가 작은 구조체의 경우(4~8 byte정도), call by value 도 나쁘지는 않다고 합니다.
+
+// primitive type : 사용자가 만든 타입(구조체로)이 아닌 언어가 지원하는 타입
+//					int, char, short, double 등. 
