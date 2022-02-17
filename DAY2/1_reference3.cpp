@@ -36,7 +36,7 @@ void f1(const int& n) {}// 2
 // A. 원본 인자를 변경하는 경우
 //    => 포인터도 좋고, 레퍼런스도 좋습니다. - 아래 코드 모두 좋습니다.!!!
 //    void inc1(int* p) {++(*p);}
-//    void inc2(int& r) {++p;}    
+//    void inc2(int& r) {++r;}    
 
 // B. 원본 인자를 변경하지 않는 경우
 // 1. primitive type 이라면   : call by value로 하세요  void fn(int n){}
