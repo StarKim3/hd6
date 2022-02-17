@@ -11,6 +11,8 @@
 
 // 캡슐화(encapsulation), 정보 은닉(information hiding) 이라고 합니다.
 
+// 결론 : 타입을 만드는데!! 되도록이만 안전하고, 사용하게 쉽게하자.
+//      => 다양한 문법을 알아야 한다는 것!!
 
 
 struct Person
