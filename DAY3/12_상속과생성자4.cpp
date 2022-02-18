@@ -26,6 +26,9 @@ public:
 	// 호출해야 한다.
 	Student(const std::string& name, int age, int n) 
 				: Person(name, age), id(n) {}
+
+
+	Student(const std::string& name, int age) : Person(name, age), id(-1) {}
 };
 
 int main()
@@ -33,5 +36,10 @@ int main()
 //	Person p1;
 //	Person p2("lee", 28);
 
-	Student s("lee", 28, 99);
+	Student s1("lee", 28, 99);
+	Student s2("park", 32);
 }
+// 채팅창 질문답
+// int& r1 = 10; // error. lvalue reference 는 lvalue 만 가리킨다.
+// const int& r2 = 10; // ok. const lvalue reference 는 lvalue, rvalue 를 모두 가리킨다.
+//							라는 문법이 있습니다 "const가 중요합니다."
