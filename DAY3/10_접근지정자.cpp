@@ -1,5 +1,5 @@
 // 10_접근지정자 - 134 page
-
+// C++ 의 접근지정자는 3개 입니다. : private, protected, public 
 class Base
 {
 private:   int a; // 자신의 멤버 함수만 접근 가능
