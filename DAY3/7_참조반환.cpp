@@ -34,10 +34,15 @@ Point f3() // return by value
 			   // 파괴 됩니다.
 }	
 
+Point& f4() // return by reference
+{			// 리턴용 임시객체를 만들지 말라는 의미
+	return pt; // pt의 별명을 반환
+}
 int main()
 {
 	std::cout << "--------------" << std::endl;
-	f3();
+//	f3();
+	f4();
 	std::cout << "--------------" << std::endl;
 }
 
