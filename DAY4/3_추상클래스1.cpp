@@ -15,11 +15,13 @@ class Rect : public Shape
 {
 	// draw 구현부가 없으면 Rect 도 추상 클래스 입니다.
 	// Rect 를 사용할수 있게 하도록 하려면 반드시 "draw()" 구현을 제공해야 합니다.
+public:
+	virtual void draw() override {}
 };
 
 int main()
 {
-	Shape  s; // error. 추상클래스는 객체를 만들수 없다.
+//	Shape  s; // error. 추상클래스는 객체를 만들수 없다.
 	Shape* p; // ok. 
 	Rect   r;
 }
