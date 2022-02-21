@@ -17,7 +17,8 @@ public:
 void f1(Point  pt) {} // Point pt = p1 으로 인자를 받게 되는 모양입니다.
 					  //			=> 복사 생성자 호출
 void f2(Point& pt) {}
-Point pt(1, 2);
+
+Point pt(1, 2); // 전역변수
 
 Point  f3() { return pt; } // 리턴용 임시객체를 만들기 위해
 							// 복사 생성자 사용
