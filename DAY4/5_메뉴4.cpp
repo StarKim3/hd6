@@ -36,7 +36,6 @@ public:
 //-----------------------
 class PopupMenu : public BaseMenu
 {
-	std::string title;
 	std::vector<BaseMenu*> v;
 public:
 	PopupMenu(const std::string& s) : BaseMenu(s) {}
