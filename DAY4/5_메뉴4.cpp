@@ -13,7 +13,13 @@ public:
 	virtual ~BaseMenu() {}
 
 	std::string getTitle() const { return title; }
+
+	// 모든 메뉴는 선택될수있다. 선택될때 호출되는 command() 함수는
+	// BaseMenu 에도 있어야 BaseMenu* 로 묶어서 사용할때 사용할수 있다.
+	virtual void command() = 0;
 };
+
+
 
 class MenuItem : public BaseMenu
 {
