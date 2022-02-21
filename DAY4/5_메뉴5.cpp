@@ -37,6 +37,14 @@ class PopupMenu : public BaseMenu
 public:
 	PopupMenu(const std::string& s) : BaseMenu(s) {}
 
+	~PopupMenu()
+	{
+		for (auto p : v)
+			delete p;
+	}
+
+
+
 	void addMenu(BaseMenu* p) { v.push_back(p); }
 
 	void command()
@@ -71,12 +79,12 @@ public:
 int main()
 {
 	PopupMenu* root = new PopupMenu("root menu");
-
 	PopupMenu* pm1 = new PopupMenu("해상도 변경");
 	PopupMenu* pm2 = new PopupMenu("색상 변경");
 
 	root->addMenu(pm1);
-	root->addMenu(pm2);
+//	root->addMenu(pm2);
+	pm1->addMenu(pm2);
 
 	pm1->addMenu(new MenuItem("HD",  11));
 	pm1->addMenu(new MenuItem("FHD", 12));
@@ -87,4 +95,8 @@ int main()
 	pm2->addMenu(new MenuItem("BLUE",  23));
 
 	root->command(); // 최상위 메뉴를 선택하면 메뉴가 시작됨.
+
+	delete root; // 1. root 메뉴만 제거하고 있습니다.
+				 // 2. 소멸자(~PopupMenu()) 가 호출됩니다. 
+				 //    => 거기서, 자신의 하위 메뉴를 delete 하면 됩니다.
 }
