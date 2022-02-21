@@ -43,8 +43,14 @@ int main()
 		}
 		else if (cmd == 9)
 		{
-			for (auto p : v)
-				p->draw();
+			for (auto p : v) // p 는 Shape* 입니다.
+				p->draw();   // Shape 에는 draw 가 없습니다.
+							 // 지난주 배운내용
+							 // => 기반 클래스포인터 파생클래스 객체를 가리킬수 있다.
+							 // => 하지만 고유 멤버에 접근할수없다.
+							 // 해결책 1. p를 Rect나 Circle 로 캐스팅 한다. 
+							 //			=> 그런데, Rect 인지 Circle 인지 알수 없다.
+							 //       2. Shape 에 draw를 추가한다.
 		}
 	}
 }
