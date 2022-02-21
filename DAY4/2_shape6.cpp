@@ -1,6 +1,22 @@
 #include <iostream>
 #include <vector>
 
+// 6. if ~ else, switch~case 등의 제어문은 
+//    "새로운 요소 추가시 코드가 수정되는 경우가 많습니다."
+//    항상, 가상함수로 할수 없을까를 생각 해 보세요
+
+// 리팩토링 용어중 "Replace conditional with polymorphism" 이라는 용어가 있습니다.
+
+// 리팩토링 : 기존에 만든 코드를 "보다 좋은 구조"로 변경하는 작업
+
+// 7. 디자인 패턴 : 1994년에 발간된 책 ( 4명의 저자 )  "gof design pattern"
+//													"gangs of four"
+//		기존에 존재하는 코딩 스타일에 이름을 부여한 서적
+//      23개의 이름. 
+
+// prototype pattern : 객체 생성후, 복사본을 만드는 가상함수로 새로운 객체를 만드는 기술
+//						clone 가상함수
+
 
 class Shape
 {
@@ -61,6 +77,12 @@ int main()
 	{
 		int cmd;
 		std::cin >> cmd;
+
+		// 생각해 볼문제 1. 객체의 생성 과정을 OCP를 만족하게 할수 없을까 ?
+		//				 => "추상 팩토리" 패턴을 사용하면 됩니다.
+
+		// 2. Undo/Redo 기능을 넣으려면 어떻게 코드를 만들어야 할까요 ?
+		// => "Command" 패턴을 사용하면 됩니다.
 
 		if (cmd == 1)
 		{
