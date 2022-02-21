@@ -3,14 +3,23 @@
 #include <string>
 #include <conio.h>
 
-class MenuItem
-{
+// 모든 메뉴의 공통의 기반 클래스를 설계 합니다.
+
+class BaseMenu
+{	
 	std::string title;
-	int id;
 public:
-	MenuItem(const std::string& s, int n) : title(s), id(n) {}
+	BaseMenu(const std::string& s) : title(s) {}
+	virtual ~BaseMenu() {}
 
 	std::string getTitle() const { return title; }
+};
+
+class MenuItem : public BaseMenu
+{
+	int id;
+public:
+	MenuItem(const std::string& s, int n) : BaseMenu(s), id(n) {}
 
 	void command()
 	{
@@ -19,14 +28,14 @@ public:
 	}
 };
 //-----------------------
-class PopupMenu
+class PopupMenu : public BaseMenu
 {
 	std::string title;
-	std::vector<MenuItem*> v;
+	std::vector<BaseMenu*> v;
 public:
-	PopupMenu(const std::string& s) : title(s) {}
+	PopupMenu(const std::string& s) : BaseMenu(s) {}
 
-	void addMenu(MenuItem* p) { v.push_back(p); }
+	void addMenu(BaseMenu* p) { v.push_back(p); }
 
 	void command()
 	{
@@ -71,8 +80,8 @@ int main()
 
 	PopupMenu pm("오늘의 메뉴");
 	pm.addMenu(&kimbam); // ????
-	pm.addMenu(&ramen); 
-	pm.addMenu(&noodle);
+	pm.addMenu(&ramen);  // ok
+	pm.addMenu(&noodle); // ok
 
 	pm.command();
 }
