@@ -2,6 +2,8 @@
 
 
 
+// 핵심 : throw, try, catch 알아 두세요..
+// python : throw, try, except 와 같습니다.
 int connectServer()
 {
 	if (1)       
@@ -23,6 +25,5 @@ int main()
 		// 1. 여기서 오류 때문에 더이상 실행할수 없다면 사용자에게 알려주고 종료 합니다.(exit())
 		// 2. 종료하지 않으면 프로그램은 계속 실행됩니다.
 	}
-
 	std::cout << "프로그램 계속 실행" << std::endl;
 }
