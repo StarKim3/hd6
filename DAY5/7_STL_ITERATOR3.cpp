@@ -9,6 +9,7 @@ int main()
 	// 핵심 1. past the end
 	auto p1 = c.begin();  // std::begin(c)
 	auto p2 = c.end();    // std::end(c)
+					// past the end 라고 부릅니다.
 
 	*p1 = 10; // ok
 //	*p2 = 10; // runtime-error. 절대 이렇게 하면 안됩니다.
