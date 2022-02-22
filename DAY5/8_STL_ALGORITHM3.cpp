@@ -32,4 +32,10 @@ int main()
 
 	auto ret4 = std::find_if(v.begin(), v.end(), f); // ok
 
+	// 2번째 나오는 3의 배수를 찾고싶다면
+	// 1번째 나오는 3의 배수의 위치가 ret4이므로
+	if (ret4 != s.end())
+	{
+		auto ret5 = std::find_if(++ret4, v.end(), f);
+	}
 }
