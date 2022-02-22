@@ -24,5 +24,16 @@ int main()
 void fn(int& a) {}  // lvalue 전용 함수 - 1
 void fn(int&& a) {} // rvalue 전용 함수 - 2
 
+// 디폴트 파라미터 주의사항 꼭 기억하라..
+// 복사 생성자 3문제 나옵니다. 수업 1시간 분량이니 꼭 다시 보세요.
+// 예외 키워드 3개 기억하세요 : throw, try, catch
 
+// 포인터 0 대신 사용하는 키워드 : nullptr
+
+// C++ 입출력 객체 이름 : 
+
+// auto, template, inline 
+
+// static 멤버 함수 는 static 멤버만 접근 가능하다. - 이 부분 수업예제 꼭 보세요
+// 생성자는 여러개가능, 소멸자여러개 안됨.							
 
