@@ -8,5 +8,13 @@ int main()
 {
 	std::vector<int> v = { 1,2,3 };
 
-	v[10] = 0; // 잘못된 인덱스 사용
+	try
+	{
+		v[10] = 0; // 잘못된 인덱스 사용
+	}
+	catch (...)
+	{
+		std::cout << "예외 발생" << std::endl;
+	}
+
 }
