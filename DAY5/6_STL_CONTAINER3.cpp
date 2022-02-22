@@ -21,6 +21,10 @@
 
 // 검색 자체가 많이 사용되지는 않는다면 : 선형컨테이너(vector, list, deque)
 
+
+// 데이타는 메모리에 보관할때 어떤 형태로 보관할것인가를 배우는 학문
+// => 자료구조(data structure)
+
 int main()
 {
 	std::vector<int> v = { 1,2,3,4,5 };
