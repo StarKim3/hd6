@@ -7,7 +7,7 @@
 // 그런데, reverse iterator 는 한개만 있으면 됩니다.
 template<typename T> class reverse_iterator
 {
-	T& current;
+	T current;
 public:
 	reverse_iterator(T p) : current(p) { --current; }
 
@@ -21,7 +21,8 @@ public:
 
 int main()
 {
-	std::vector<int> v = { 1,2,3,4,5,6,7,8,9,10 };
+//	std::vector<int> v = { 1,2,3,4,5,6,7,8,9,10 };
+	std::list<int>   v = { 1,2,3,4,5,6,7,8,9,10 };
 
 	reverse_iterator p(v.end()); // 프로젝트-속성메뉴에서 C++17로 맞추세요..
 	++p;
