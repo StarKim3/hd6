@@ -13,7 +13,7 @@ int main()
 //	std::replace(v.begin(), v.end(), 3, 0);   // A
 
 	// Â¦¼ö¸¦ 0À¸·Î 
-	std::replace_if(v.begin(), v.end(), [](int n) { return n % 2 == 0; }, 0);   // A
+	std::replace_if(v.begin(), v.end(), [](int n) -> bool { return n % 2 == 0; }, 0);   // A
 
 	for (auto e : v)
 		std::cout << e << ", ";
